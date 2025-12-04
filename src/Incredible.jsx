@@ -3,7 +3,7 @@ import React from 'react'
 export default function Incredible() {
   return (
 
-    <div className="bg-[url(img/incredible.jpg)] incredible-main relative bg-center bg-gradient-to-b from-teal-900/70 to-teal-900/90 z-50 bg-cover lg:p-20 md:p-20">
+    <div className="bg-[url(/img/incredible.jpg)] incredible-main relative bg-center bg-gradient-to-b from-teal-900/70 to-teal-900/90 z-50 bg-cover lg:p-20 md:p-20">
 
 
       {/* Content */}
