@@ -59,7 +59,7 @@ export default function Punjab() {
 
       <div className="space-y-16 my-10 relative">
         {/* Vertical line */}
-        <div className="absolute lg:block md:block sm:hidden top-0 left-1/2 -translate-x-1/2 h-[90%] w-1 bg-gray-300"></div>
+        <div className="absolute hidden lg:block md:block sm:hidden top-0 left-1/2 -translate-x-1/2 h-[90%] w-1 bg-gray-300"></div>
 
         {showMore &&
           steps.map((step, index) => (
