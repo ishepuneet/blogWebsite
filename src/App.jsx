@@ -44,7 +44,7 @@ export default function App() {
         {/* /////////////HEADER TEXT////////////////// */}
 
         <div className="text-white max-w-5xl m-auto heading ">
-          <h1 className='lg:text-9xl lg:-ml-80 md:text-9xl font-medium lg:flex md:flex md:justify-center'>T <span className='font-light'>ravel</span>
+          <h1 className='lg:text-9xl lg:-ml-80 md:text-9xl border font-medium lg:flex md:flex justify-center'>T <span className='font-light'>ravel</span>
             <span className='plane-wrapper'>
               <GiCommercialAirplane className='plane' />
               <span className="fog"></span>
