@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+
+::-webkit-scrollbar{
+  width: 0;
+}
+
+
+/* ////////////HEADER ANIMATION/////////////// */
+
+@keyframes takeoff {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(0) translateY(0) rotate(-45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0px) translateY(-500px) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+.plane {
+  animation: takeoff 4s ease-in-out infinite;
+}
+
+/* ////////////////FOG ANIMATION/////////////////// */
+@keyframes fog-burst {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.5) translateX(-20px);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.5) translateX(-40px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2) translateX(-60px);
+  }
+}
+
+.plane-wrapper {
+  position: relative;
+  /* so fog is positioned relative to the plane */
+  display: inline-block;
+}
+
+.fog {
+  position: absolute;
+  bottom: 10px;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 20%, transparent 70%);
+  border-radius: 50%;
+  animation: fog-burst 1.5s ease-out forwards;
+}
+
+/* multiple fogs with delay for natural effect */
+.fog.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.fog.delay-2 {
+  animation-delay: 0.3s;
+}
+
+
+
+/* /////////////////VISIT INDIA////////////////// */
+.visit-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideup 3s ease forwards;
+}
+
+/* /////////////////////////////////////*/
+
+
+
+/* /////////////////.destination/////////////////// */
+
+.destination {
+  box-shadow: 10px 0px 78px 93px rgb(0, 78, 78);
+}
+
+
+/* //////////////gallery CONTENT///////////// */
+.punjab-heading {
+  text-shadow: 2px 1px 5px white;
+}
+
+.jk-heading {
+  text-shadow: 2px 1px 5px white;
+}
+
+.himachal-heading {
+  text-shadow: 2px 1px 5px white;
+}
+
+
+
+
+/* ////////////////////TRAVEL CONTENT/////////////////////// */
+  .travel-heading {
+     font-family: "Amita", serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile (max 640px) */
+@media only screen and (max-width: 320px) {
+
+  /* //////////HEADER PART/////////////// */
+  .desktop-nav {
+    display: none;
+  }
+
+  .responsive-nav {
+    display: block;
+  }
+
+  .heading {
+    padding: 70% 20px;
+  }
+
+  .heading h1 {
+    display: flex;
+    font-size: 50px;
+  }
+
+  .heading h5 {
+    font-size: 40px;
+    text-align: center;
+
+  }
+
+
+  /* /////////////PLANE ANIMATION///////////// */
+  @keyframes takeoff {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateX(0) translateY(0) rotate(-45deg);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(0px) translateY(-500px) rotate(-45deg);
+      opacity: 1;
+    }
+  }
+
+  /* //////////////////////////////////////// */
+
+
+  /* /////////////VISIT INDIA///////////////// */
+  .visitindia {
+    background-image: url(../public/img/india.jpg);
+    padding: 10% 0;
+  }
+
+  .visit-heading {
+    text-align: center;
+    padding: 0;
+    margin: 10% 0;
+  }
+
+  .visit-heading h1:nth-child(1) {
+    font-size: 5rem;
+  }
+
+  h1:nth-child(2) {
+    font-size: 5rem;
+  }
+
+
+
+  /* /////////////////DESTINATION///////////////// */
+  .destination {
+    margin: 50% 0;
+    margin-bottom: 0;
+  }
+
+  .destination h1 {
+    font-size: 2rem;
+  }
+
+  .destination-box {
+    padding: 10% 0;
+  }
+
+
+  /* ////////////FAV-PLACES////////////// */
+  .fav-places {
+    width: 130px;
+    height: 200px;
+  }
+
+  .img-group,
+  h5 {
+    font-size: 18px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 90px;
+  }
+
+
+  /* ////////////////INCREDIBLE INDIA////////////////// */
+
+  .incredible-main {
+    padding: 30% 10%;
+  }
+
+
+  .incredible-heading h1 {
+    font-size: 50px;
+  }
+
+  .under-line {
+    gap: 20px;
+  }
+
+
+
+  /* //////////////////////////GALLERY CONTENT HERE////////////////////////////// */
+
+
+  .punjab-heading {
+    text-shadow: 3px 0px 0px white;
+    font-size: 3rem;
+  }
+
+  .jk-heading {
+    text-shadow: 3px 0px 0px white;
+    font-size: 4.5rem;
+  }
+
+  .himachal-heading {
+    text-shadow: 3px 0px 0px white;
+    font-size: 4rem;
+  }
+
+
+
+  /* ///////////////////// ERROR PART //////////////////////////// */
+
+  .error-btn {
+    position: absolute;
+    bottom: 92px;
+  }
+
+
+
+  /* ////////////TRAVEL TIPS/////////////// */
+
+  .taj-bg{
+    background-image: url(../public/img/tajbg.jpg);
+  }
+
+  .travel-heading {
+    font-size: 36px;
+  }
+
+  
+
+}
